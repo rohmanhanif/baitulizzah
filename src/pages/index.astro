@@ -443,7 +443,8 @@ import berita from "../data/berita";
               </div>
             </div>
             <div class="row">
-              <div
+
+              <!-- <div
                 class="col-md-6 col-lg-6"
                 data-aos="fade-up"
                 data-aos-delay=""
@@ -469,8 +470,9 @@ import berita from "../data/berita";
                   </p>
                   <p><a href="single.html">Baca Selengkapnya</a></p>
                 </div>
-              </div>
+              </div> -->
 
+              {berita().map(x => 
               <div
                 class="col-md-6 col-lg-6"
                 data-aos="fade-up"
@@ -497,6 +499,8 @@ import berita from "../data/berita";
                   <p><a href="single2.html">Baca Selengkapnya</a></p>
                 </div>
               </div>
+              )}
+
             </div>
           </div>
         </div>
