@@ -11,8 +11,12 @@
     "wiki": "tiddlywiki src --listen"
   },
   "dependencies": {
+    "@astrojs/svelte": "^3.1.0",
     "astro": "^2.8.5",
     "prettier-plugin-astro": "^0.11.0",
+    "prettier-plugin-svelte": "^3.0.0",
+    "stat-aja": "^1.0.0",
+    "svelte": "^4.0.0",
     "tiddlywiki": "^5.3.0",
     "vite-plugin-yaml2": "^1.1.5"
   }
