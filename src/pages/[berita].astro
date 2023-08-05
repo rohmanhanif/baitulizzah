@@ -193,7 +193,7 @@ const { title, published_date, text, gambar, ringkasan, tanggal_diformat } =
             <div class="col-lg-10">
               <div class="box-shadow-content">
                 <div class="block-heading-1">
-                  <span class="d-block mb-3 text-white" data-aos="fade-up"
+                  <span class="d-block my-3 text-white" data-aos="fade-up"
                     >{tanggal_diformat}
                     <span class="mx-2 text-primary">
                       <h1 class="mb-4" data-aos="fade-up" data-aos-delay="100">
@@ -210,7 +210,7 @@ const { title, published_date, text, gambar, ringkasan, tanggal_diformat } =
       <section class="blog-section">
         <div class="container">
           <div class="row">
-            <div class="col-md-8 blog-content">
+            <div class="col-md-8 pt-10 blog-content">
               <Fragment set:html={text} />
               <!-- <img
                 src="/images/hero_2.jpg"
@@ -290,7 +290,7 @@ const { title, published_date, text, gambar, ringkasan, tanggal_diformat } =
         </div>
       </section>
     </div>
-    <Statistik client:only judul={title}></Statistik>
+    <Statistik client:only judul={title} />
     <script is:inline src="/js/jquery-3.3.1.min.js"></script>
     <script is:inline src="/js/popper.min.js"></script>
     <script is:inline src="/js/bootstrap.min.js"></script>
