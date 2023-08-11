@@ -8,5 +8,5 @@ export default defineConfig({
   vite: {
     plugins: [yaml()],
   },
-  integrations: [svelte(), UnoCSS()],
+  integrations: [svelte(), UnoCSS({})],
 });
