@@ -1,6 +1,7 @@
 ---
 import beritanya from "../data/berita";
-import Statistik from "../komponen/statistik.svelte";
+import Komentar from "../components/komentar.svelte";
+// import Statistik from "../komponen/statistik.svelte";
 
 export function getStaticPaths() {
   return beritanya().map(
@@ -193,7 +194,7 @@ const { title, published_date, text, gambar, ringkasan, tanggal_diformat } =
             <div class="col-lg-10">
               <div class="box-shadow-content">
                 <div class="block-heading-1">
-                  <span class="d-block mb-3 text-white" data-aos="fade-up"
+                  <span class="d-block my-3 text-white" data-aos="fade-up"
                     >{tanggal_diformat}
                     <span class="mx-2 text-primary">
                       <h1 class="mb-4" data-aos="fade-up" data-aos-delay="100">
@@ -210,7 +211,7 @@ const { title, published_date, text, gambar, ringkasan, tanggal_diformat } =
       <section class="blog-section">
         <div class="container">
           <div class="row">
-            <div class="col-md-8 blog-content">
+            <div class="col-md-8 pt-10 blog-content">
               <Fragment set:html={text} />
               <!-- <img
                 src="/images/hero_2.jpg"
@@ -227,43 +228,14 @@ const { title, published_date, text, gambar, ringkasan, tanggal_diformat } =
               </p> -->
               <div class="pt-5"></div>
               <div class="pt-5">
-                <h3 class="mb-5">0 Comments</h3>
+                <!-- <h3 class="mb-5">0 Comments</h3> -->
                 <ul class="comment-list">
                   <li class="comment">
                     <div class="vcard bio"></div>
 
                     <div class="comment-form-wrap pt-5">
                       <h3 class="mb-5">Leave a comment</h3>
-                      <form action="#" class="">
-                        <div class="form-group">
-                          <label for="name">Name *</label>
-                          <input type="text" class="form-control" id="name" />
-                        </div>
-                        <div class="form-group">
-                          <label for="email">Email *</label>
-                          <input type="email" class="form-control" id="email" />
-                        </div>
-                        <div class="form-group">
-                          <label for="website">Website</label>
-                          <input type="url" class="form-control" id="website" />
-                        </div>
-                        <div class="form-group">
-                          <label for="message">Message</label>
-                          <textarea
-                            name=""
-                            id="message"
-                            cols="30"
-                            rows="10"
-                            class="form-control"></textarea>
-                        </div>
-                        <div class="form-group">
-                          <input
-                            type="submit"
-                            value="Post Comment"
-                            class="btn btn-primary btn-md text-white"
-                          />
-                        </div>
-                      </form>
+                      <Komentar client:only />
                     </div>
                   </li>
                 </ul>
@@ -290,7 +262,7 @@ const { title, published_date, text, gambar, ringkasan, tanggal_diformat } =
         </div>
       </section>
     </div>
-    <Statistik client:only judul={title}></Statistik>
+    <!-- <Statistik client:only judul={title} /> -->
     <script is:inline src="/js/jquery-3.3.1.min.js"></script>
     <script is:inline src="/js/popper.min.js"></script>
     <script is:inline src="/js/bootstrap.min.js"></script>
